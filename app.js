@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 
    User.findById('67385ae96cd256d20e86b01d')
     .then(user => {
-      req.user = new User(user.userName,user.userEmail,user.userCart,user._id);
+      req.user = new User(user.userName,user.userEmail,user.cart,user._id);
       next();
     })
     .catch(err => console.log(err)); 
